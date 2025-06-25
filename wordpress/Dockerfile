@@ -2,7 +2,7 @@ FROM bitnami/wordpress:latest
 
 USER root
 
-RUN install_packages cron vim rsync
+RUN install_packages cron vim
 
 COPY --chmod=+x custom-entrypoint.sh /custom-entrypoint.sh
 
