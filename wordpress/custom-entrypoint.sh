@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cp -r --no-preserve=mode,ownership,timestamps /bitnami/wordpress/. /opt/bitnami/wordpress/
+cp -r /bitnami/wordpress/. /opt/bitnami/wordpress/ || true
 
 if [[ $# -eq 0 ]]; then
   set -- "/opt/bitnami/scripts/apache/run.sh"
